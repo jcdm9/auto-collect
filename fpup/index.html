@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- bootstrap -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <!-- styles -->
+    <link href="./styles/index.css" rel="stylesheet">
+  </head>
+  <body onLoad="init()">
+    <div class="col-sm-3">
+      <label>json:</label>
+      <textarea id="json" class="form-control" rows="20">
+{
+  "url": "https://www.youtube.com",
+  "parent": "#dismissible",
+  "details": [{
+    "name": "title",
+    "element": "#video-title-link",
+    "type": "innerText",
+    "attribute": ""
+  }, {
+    "name": "url",
+    "element": "#video-title-link",
+    "type": "attribute",
+    "attribute": "href"
+  }, {
+    "name": "thumbnail",
+    "element": "#img",
+    "type": "attribute",
+    "attribute": "src"
+  }]
+}
+      </textarea><br>
+      <button class="btn btn-primary" onClick="runSimulation()">Simulate</button>
+    </div>
+    <div class="col-sm-3 frame">
+      <ul></ul>
+      <div>
+        <div class="msj-rta macro">
+          <div class="text text-r" style="background:whitesmoke !important">
+            <input class="mytext" placeholder="Type a message"/>
+          </div>
+        </div>
+        <div style="padding:10px;">
+          <span class="glyphicon glyphicon-share-alt"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- bootstrap & jquery -->
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <!-- scripts -->
+    <script src="./scripts/chat-demo.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
