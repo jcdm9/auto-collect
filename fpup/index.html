@@ -8,7 +8,11 @@
     <link href="./styles/index.css" rel="stylesheet">
   </head>
   <body onLoad="init()">
-    <div class="col-sm-3">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="q1">Question 1:</label>
+        <input id="q1" type="text" class="form-control" value="Which of these are you interested in?" />
+      </div>
       <label>json:</label>
       <textarea id="json" class="form-control" rows="20">
 {
@@ -33,6 +37,16 @@
 }
       </textarea><br>
       <button class="btn btn-primary" onClick="runSimulation()">Simulate</button>
+      <hr />
+      <h3>Commands</h3>
+      <small class="text-muted">Command options are created by developers.</small><br><br>
+      <div id="commandSection"></div>
+      <button class="btn btn-primary" onClick="addCommand()">Add Command</button>
+      <select id="command">
+        <option>- Please select command -</option>
+        <option value="sendMessage">Send message</option>
+        <option value="sendColorOptions">Send color options</option>
+      </select>
     </div>
     <div class="col-sm-3 frame">
       <ul></ul>
@@ -51,6 +65,9 @@
     <!-- bootstrap & jquery -->
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- scripts -->
     <script src="./scripts/chat-demo.js"></script>
